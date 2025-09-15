@@ -1,0 +1,19 @@
+- title: Home
+  page: index.html
+  url: /
+- title: Story
+  page: story.html
+  url: /story
+- title: Venue
+  page: venue.html
+  url: /venue
+# - title: Support
+#   url: /support.html
+#  sublinks:
+#    - title: FAQ
+#      url: /faq.html
+#    - title: Documentation
+#      url: /documentation.html
+#    - title: separator
+#    - title: Customer Support
+#      url: /customer-support.html

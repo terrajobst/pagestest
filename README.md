@@ -6,7 +6,6 @@ This is our wedding website, which can currently be found at
 
 ## To be done
 
-* Fix the WWW subdomain forwarding
 * RSVP integration
     - Options:
         - Office Forms

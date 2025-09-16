@@ -3,124 +3,85 @@ layout: page
 ---
 
 <header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(assets/images/hero.jpg);background-position:top center;" data-stellar-background-ratio="0.5">
-	<div class="overlay"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center">
-				<div class="display-t">
-					<div class="display-tc animate-box" data-animate-effect="fadeIn">
-						<h1>{{ site.partner1 }} &amp; {{ site.partner2 }}</h1>
-						<h2>We Are Getting Married</h2>
-						<div class="simply-countdown simply-countdown-one"></div>
-						<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                        <h1>{{ site.partner1 }} &amp; {{ site.partner2 }}</h1>
+                        <h2>We Are Getting Married</h2>
+                        <div class="simply-countdown simply-countdown-one"></div>
+                        <p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 
-<div id="fh5co-couple">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-				<h2>Hello!</h2>
-				<h3>{{ site.wedding-tag }}</h3>
-				<p>We invited you to celebrate our wedding</p>
-			</div>
-		</div>
-		<div class="couple-wrap animate-box">
-			<div class="couple-half">
-				<div class="groom">
-					<img src="assets/images/immo.jpg" alt="groom" class="img-responsive">
-				</div>
-				<div class="desc-groom">
-					<h3>Immo Landwerth</h3>
-					<p>
-						Born in Germany, moved to US in 2010 for work, and fell
-						in love with the pacific northwest. Well, with Kristina
-						too but that took a few more years.
-					</p>
-				</div>
-			</div>
-			<p class="heart text-center"><i class="icon-heart2"></i></p>
-			<div class="couple-half">
-				<div class="bride">
-					<img src="assets/images/kristina.jpg" alt="bride" class="img-responsive">
-				</div>
-				<div class="desc-bride">
-					<h3>Kristina Walker</h3>
-					<p>
-						Born in Bellevue but not your typical Bellevue girl. She
-						also worked on a farm & hauled wood, rides
-						motorcycles, and plays bass guitar.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+{% include_relative _content/couple.html %}
 
 <div id="fh5co-event" class="fh5co-bg" style="background-image:url(assets/images/img_bg_3.jpg);">
-	<div class="overlay"></div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-				<span>Our Special Events</span>
-				<h2>Wedding Events</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="display-t">
-				<div class="display-tc">
-					<div class="col-md-10 col-md-offset-1">
-						<div class="col-md-6 col-sm-6 text-center">
-							<div class="event-wrap animate-box">
-								<h3>Courthouse</h3>
-								<div class="event-col">
-									<i class="icon-clock"></i>
-									<span>4:00 PM</span>
-								</div>
-								<div class="event-col">
-									<i class="icon-calendar"></i>
-									<span>Thursday 9</span>
-									<span>October, 2025</span>
-								</div>
-								<p>
-									For our special family member, the IRS, we
-									decided to get the boring stuff out of the
-									way this year. Only close family members. If
-									the IRS doesn't know you from our tax
-									returns, you're sadly not invited.
-								</p>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 text-center">
-							<div class="event-wrap animate-box">
-								<h3>Wedding Party</h3>
-								<div class="event-col">
-									<i class="icon-clock"></i>
-									<span>All weekend!</span>
-								</div>
-								<div class="event-col">
-									<i class="icon-calendar"></i>
-									<span>Friday 25 - Sunday 27</span>
-									<span>July, 2026</span>
-								</div>
-								<p>
-									Our actual wedding celebrations will be next
-									year, in the romantic, or at least proper
-									German, Leavenworth. There will be love,
-									festivities and plenty of long words. No
-									plans to invade Poland. Yet.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                <span>Our Special Events</span>
+                <h2>Wedding Events</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="display-t">
+                <div class="display-tc">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-6 col-sm-6 text-center">
+                            <div class="event-wrap animate-box">
+                                <h3>Courthouse</h3>
+                                <div class="event-col">
+                                    <i class="icon-clock"></i>
+                                    <span>4:00 PM</span>
+                                </div>
+                                <div class="event-col">
+                                    <i class="icon-calendar"></i>
+                                    <span>Thursday 9</span>
+                                    <span>October, 2025</span>
+                                </div>
+                                <p>
+                                    For our special family member, the IRS, we
+                                    decided to get the boring stuff out of the
+                                    way this year. Only close family members. If
+                                    the IRS doesn't know you from our tax
+                                    returns, you're sadly not invited.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 text-center">
+                            <div class="event-wrap animate-box">
+                                <h3>Wedding Party</h3>
+                                <div class="event-col">
+                                    <i class="icon-clock"></i>
+                                    <span>All weekend!</span>
+                                </div>
+                                <div class="event-col">
+                                    <i class="icon-calendar"></i>
+                                    <span>Friday 25 - Sunday 27</span>
+                                    <span>July, 2026</span>
+                                </div>
+                                <p>
+                                    Our actual wedding celebrations will be next
+                                    year, in the romantic, or at least proper
+                                    German, Leavenworth. There will be love,
+                                    festivities and plenty of long words. No
+                                    plans to invade Poland. Yet.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% include_relative _content/story.html %}
@@ -128,34 +89,34 @@ layout: page
 {% include_relative _content/gallery.html %}
 
 <div id="fh5co-started" class="fh5co-bg" style="background-image:url(assets/images/img_bg_4.jpg);">
-	<div class="overlay"></div>
-	<div class="container">
-		<div class="row animate-box">
-			<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-				<h2>Are You Attending?</h2>
-				<p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
-			</div>
-		</div>
-		<div class="row animate-box">
-			<div class="col-md-10 col-md-offset-1">
-				<form class="form-inline">
-					<div class="col-md-4 col-sm-4">
-						<div class="form-group">
-							<label for="name" class="sr-only">Name</label>
-							<input type="name" class="form-control" id="name" placeholder="Name">
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<div class="form-group">
-							<label for="email" class="sr-only">Email</label>
-							<input type="email" class="form-control" id="email" placeholder="Email">
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4">
-						<button type="submit" class="btn btn-default btn-block">I am Attending</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row animate-box">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+                <h2>Are You Attending?</h2>
+                <p>Please Fill-up the form to notify you that you're attending. Thanks.</p>
+            </div>
+        </div>
+        <div class="row animate-box">
+            <div class="col-md-10 col-md-offset-1">
+                <form class="form-inline">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="name" class="form-control" id="name" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <button type="submit" class="btn btn-default btn-block">I am Attending</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

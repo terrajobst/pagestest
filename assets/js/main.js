@@ -18,7 +18,6 @@
 
     };
 
-
     var offcanvasMenu = function() {
 
         $('#page').prepend('<div id="fh5co-offcanvas" />');
@@ -34,14 +33,14 @@
             .removeClass('has-dropdown');
 
         // Hover dropdown menu on mobile
-        $('.offcanvas-has-dropdown').mouseenter(function(){
+        $('.offcanvas-has-dropdown').mouseenter(function() {
             var $this = $(this);
 
             $this
                 .addClass('active')
                 .find('ul')
                 .slideDown(500, 'easeOutExpo');
-        }).mouseleave(function(){
+        }).mouseleave(function() {
 
             var $this = $(this);
             $this
@@ -50,8 +49,7 @@
                 .slideUp(500, 'easeOutExpo');
         });
 
-
-        $(window).resize(function(){
+        $(window).resize(function() {
 
             if ( $('body').hasClass('offcanvas') ) {
 
@@ -62,12 +60,10 @@
         });
     };
 
-
     var burgerMenu = function() {
 
         $('body').on('click', '.js-fh5co-nav-toggle', function(event){
             var $this = $(this);
-
 
             if ( $('body').hasClass('overflow offcanvas') ) {
                 $('body').removeClass('overflow offcanvas');
@@ -80,8 +76,6 @@
         });
     };
 
-
-
     var contentWayPoint = function() {
         var i = 0;
         $('.animate-box').waypoint( function( direction ) {
@@ -91,8 +85,7 @@
                 i++;
 
                 $(this.element).addClass('item-animate');
-                setTimeout(function(){
-
+                setTimeout(function() {
                     $('body .animate-box.item-animate').each(function(k){
                         var el = $(this);
                         setTimeout( function () {
@@ -110,38 +103,30 @@
                             el.removeClass('item-animate');
                         },  k * 200, 'easeInOutExpo' );
                     });
-
                 }, 100);
-
             }
 
         } , { offset: '85%' } );
     };
 
-
     var dropdown = function() {
-
-        $('.has-dropdown').mouseenter(function(){
-
+        $('.has-dropdown').mouseenter(function() {
             var $this = $(this);
             $this
                 .find('.dropdown')
                 .css('display', 'block')
                 .addClass('animated-fast fadeInUpMenu');
 
-        }).mouseleave(function(){
+        }).mouseleave(function() {
             var $this = $(this);
-
             $this
                 .find('.dropdown')
                 .css('display', 'none')
                 .removeClass('animated-fast fadeInUpMenu');
         });
-
     };
 
-
-    var testimonialCarousel = function(){
+    var testimonialCarousel = function() {
         var owl = $('.owl-carousel-fullwidth');
         owl.owlCarousel({
             items: 1,
@@ -155,11 +140,8 @@
         });
     };
 
-
     var goToTop = function() {
-
-        $('.js-gotop').on('click', function(event){
-
+        $('.js-gotop').on('click', function(event) {
             event.preventDefault();
 
             $('html, body').animate({
@@ -169,19 +151,15 @@
             return false;
         });
 
-        $(window).scroll(function(){
-
+        $(window).scroll(function() {
             var $win = $(window);
             if ($win.scrollTop() > 200) {
                 $('.js-top').addClass('active');
             } else {
                 $('.js-top').removeClass('active');
             }
-
         });
-
     };
-
 
     // Loading page
     var loaderPage = function() {
@@ -190,22 +168,10 @@
 
     var counter = function() {
         $('.js-counter').countTo({
-             formatter: function (value, options) {
-          return value.toFixed(options.decimals);
-        },
+            formatter: function (value, options) {
+                return value.toFixed(options.decimals);
+            },
         });
-    };
-
-    var counterWayPoint = function() {
-        if ($('#fh5co-counter').length > 0 ) {
-            $('#fh5co-counter').waypoint( function( direction ) {
-
-                if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-                    setTimeout( counter , 400);
-                    $(this.element).addClass('animated');
-                }
-            } , { offset: '90%' } );
-        }
     };
 
     // Parallax
@@ -213,8 +179,7 @@
         $(window).stellar({ horizontalScrolling: false });
     };
 
-
-    $(function(){
+    $(function() {
         mobileMenuOutsideClick();
         parallax();
         offcanvasMenu();
@@ -225,8 +190,6 @@
         goToTop();
         loaderPage();
         counter();
-        counterWayPoint();
     });
-
 
 }());

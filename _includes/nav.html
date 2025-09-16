@@ -33,6 +33,11 @@
                             </li>
                         {% endif %}
                     {% endfor %}
+                    {% if site.rsvp-link %}
+                        <li>
+                            <a href="{{ site.rsvp-link }}">RSVP</a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

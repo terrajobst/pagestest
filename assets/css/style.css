@@ -1381,6 +1381,8 @@ form label {
   font-weight: 400;
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 #fh5co-started .form-inline .form-group {
   width: 100% !important;

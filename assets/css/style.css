@@ -1097,19 +1097,19 @@ form label {
     margin: 0 auto;
   }
 }
-.couple-half .groom {
+.couple-half .bride {
   float: right;
   margin-right: 5px;
 }
-.couple-half .bride {
+.couple-half .groom {
   float: left;
   margin-left: 5px;
 }
-.couple-half .desc-groom {
+.couple-half .desc-bride {
   padding-right: 180px;
   text-align: right;
 }
-.couple-half .desc-bride {
+.couple-half .desc-groom {
   padding-left: 180px;
   text-align: left;
 }
@@ -1118,11 +1118,11 @@ form label {
     margin-left: 0;
     margin-right: 0;
   }
-  .couple-half .desc-groom {
+  .couple-half .desc-bride {
     padding-right: 0;
     text-align: center;
   }
-  .couple-half .desc-bride {
+  .couple-half .desc-groom {
     padding-left: 0;
     text-align: center;
   }

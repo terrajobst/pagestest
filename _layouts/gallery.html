@@ -1,0 +1,67 @@
+---
+layout: empty
+---
+
+<div class="fh5co-loader"></div>
+
+<div id="page">
+
+{% include nav.html %}
+
+<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(/assets/images/bg_story.jpg);">
+    <div class="overlay"></div>
+    <div class="fh5co-container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="display-t">
+                    <div class="display-tc animate-box" data-animate-effect="fadeIn">
+                        <h1>Photos</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="fh5co-gallery" class="fh5co-section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+                <h2>{{ page.title }}</h2>
+            </div>
+        </div>
+        <div class="row row-bottom-padded-md">
+            <div class="col-md-12">
+                <ul id="fh5co-gallery-list">
+                    {% assign include_folder = page.dir %}
+                    {% for file in site.static_files %}
+                        {% if file.path contains include_folder %}
+                            {% if file.name != 'index.jpg' %}
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url({{ file.path }}); ">
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="fh5co-footer" role="contentinfo">
+    <div class="container">
+        <div class="row copyright">
+            <div class="col-md-12 text-center">
+                <p>
+                    <small class="block">&copy; {{ site.copyright }}. All Rights Reserved.</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+<div class="gototop js-top">
+    <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+</div>

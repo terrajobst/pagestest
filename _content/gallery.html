@@ -2,86 +2,42 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
-                <span>Our Memories</span>
-                <h2>Wedding Gallery</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <span>Photos</span>
+                <h2>Our Memories</h2>
+                <p>
+                    We had a great time with you. Below are the pictures. Please
+                    download the ones you like because this website won't be
+                    online forever.
+                </p>
             </div>
         </div>
         <div class="row row-bottom-padded-md">
             <div class="col-md-12">
                 <ul id="fh5co-gallery-list">
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-1.jpg); ">
-                        <a href="assets/images/gallery-1.jpg">
-                            <div class="case-studies-summary">
-                                <span>14 Photos</span>
-                                <h2>Two Glas of Juice</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-2.jpg); ">
-                        <a href="#" class="color-2">
-                            <div class="case-studies-summary">
-                                <span>30 Photos</span>
-                                <h2>Timer starts now!</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-3.jpg); ">
-                        <a href="#" class="color-3">
-                            <div class="case-studies-summary">
-                                <span>90 Photos</span>
-                                <h2>Beautiful sunset</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-4.jpg); ">
-                        <a href="#" class="color-4">
-                            <div class="case-studies-summary">
-                                <span>12 Photos</span>
-                                <h2>Company's Conference Room</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-5.jpg); ">
-                        <a href="#" class="color-3">
-                            <div class="case-studies-summary">
-                                <span>50 Photos</span>
-                                <h2>Useful baskets</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-6.jpg); ">
-                        <a href="#" class="color-4">
-                            <div class="case-studies-summary">
-                                <span>45 Photos</span>
-                                <h2>Skater man in the road</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-7.jpg); ">
-                        <a href="#" class="color-4">
-                            <div class="case-studies-summary">
-                                <span>35 Photos</span>
-                                <h2>Two Glas of Juice</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-8.jpg); ">
-                        <a href="#" class="color-5">
-                            <div class="case-studies-summary">
-                                <span>90 Photos</span>
-                                <h2>Timer starts now!</h2>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(assets/images/gallery-9.jpg); ">
-                        <a href="#" class="color-6">
-                            <div class="case-studies-summary">
-                                <span>56 Photos</span>
-                                <h2>Beautiful sunset</h2>
-                            </div>
-                        </a>
-                    </li>
+                    {% assign include_folder = '/gallery/' %}
+                    {% for file in site.pages %}
+                        {% if file.path != "gallery.html" %}
+                            {% if file.dir contains include_folder %}
+                                {% capture image %}/{{ file.path | replace: '.html', '.jpg' }}{% endcapture %}
+                                {% assign counter = 0 %}
+                                {% for f in site.static_files %}
+                                    {% if f.path contains file.dir %}
+                                        {% if f.name != 'index.jpg' %}
+                                            {% assign counter = counter | plus: 1 %}
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                                <li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url({{ image }}); ">
+                                    <a href="{{ file.url }}">
+                                        <div class="case-studies-summary">
+                                            <span>{{ counter }} Photos '{{ image }}'</span>
+                                            <h2>{{ file.title }}</h2>
+                                        </div>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
         </div>

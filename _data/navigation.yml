@@ -7,6 +7,9 @@
 - title: Venue
   page: venue.html
   url: /venue
+- title: Gallery
+  page: gallery.html
+  url: /gallery
 # - title: Support
 #   url: /support.html
 #  sublinks:

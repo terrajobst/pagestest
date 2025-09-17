@@ -8,7 +8,5 @@ This is our wedding website, which can currently be found at
 
 * Photos
     - Replace stock photos as much as possible
-* Story
-    - Flesh it out
 * Venue
     - List more things to do in Leavenworth
